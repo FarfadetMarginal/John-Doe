@@ -224,7 +224,7 @@ body{
                     gap: 20px;
                     display: flex;
                     flex-direction: column;
-                    flex: 0 0 49%;
+                    flex: 0 0 48%;
                     >details{
                         background-color: var(--blanc);
                         color: var(--jaune);
@@ -344,4 +344,95 @@ body{
             }
         }
     }
+    .modale{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        left: 35%;
+        align-items: center;
+        justify-content: center;
+        transition: all .4s;
+        background-color: rgba(0, 0, 0, 0.421);
+        &:target{
+            visibility: visible;
+            opacity: 1;  
+        }
+        a{
+            background-color: var(--red);
+            color: #011826;
+            display: block;
+            width: fit-content;
+            justify-self: end;
+        }
+        form{
+            display: grid;
+            position: relative;
+            width: 300px;
+            background-color: var(--blanc);
+            padding: 15px;
+            h2{
+                color: var(--nuit);
+                font-size: 24px;
+                padding-bottom: 15px;
+            }
+            label{
+                background-color: var(--jaune);
+                color: var(--nuit);
+                padding: 10px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+            button{
+                border-style: groove;
+                border-color: var(--blanc);
+                border-width: 1px;
+                background-color: var(--nuit);
+                color: var(--blanc);
+                padding: 14px;
+                display: block;
+                margin-top: 10px;
+                width: stretch;
+                justify-self: center;
+                &:hover{
+                    background-color: var(--red);
+                } 
+            }
+        }
+    }
+}
+
+@media screen and (max-width :1024px) {
+    body{
+        main{
+
+            .s1{
+                grid-template-columns: 1fr;
+                img{
+                    width: 70%;
+                    justify-self: center;
+                }
+            }
+            .s2{
+                .s2gd{
+                    img{
+                        width: 70%;
+                    }
+                }
+                .s2gd2{
+                    img{
+                        width: 70%;
+                    }
+                }
+            }
+            .s4{
+                .s4d2{
+                    grid-template-columns: 1fr 1fr;
+                    article:nth-child(3){
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+        }
+    }   
 }
