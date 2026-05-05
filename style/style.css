@@ -15,10 +15,7 @@
     a{
         text-decoration: none;
     }
-    ul{
-        padding-left: 0;
-        list-style: none;
-    }
+
     img{
         width: 100%;
         object-fit: cover;
@@ -43,7 +40,9 @@ body{
             }
         }
         nav{
-            ul{
+            ul{         
+                padding-left: 0;
+                list-style: none;
                 display: flex;
                 gap: 15px;
                 a{
@@ -124,9 +123,9 @@ body{
                 align-items: center;
                 padding-bottom: 90px;
                 img{
-                    height: 800px;
+                    max-height: 800px;
                     transform: translateX(100px);
-                    z-index: -2;
+                    z-index: 0;
                 }
                 .s2d1{
                     background-color: var(--jaune);
@@ -134,7 +133,7 @@ body{
                     transform: translateX(-100px);
                     max-width: 400px;
                     padding: 25px 25px 0 25px;
-                    z-index: -1;
+                    z-index: 1;
                     p{
                         padding-top: 20px;
                     }
@@ -155,7 +154,7 @@ body{
                     width: fit-content;
                     justify-self: center;
                     transform: translateY(20px);
-                    z-index: 0;
+                    z-index: 2;
                     &:hover{
                         background-color: var(--red);
                     } 
@@ -166,9 +165,9 @@ body{
                 display: flex;
                 align-items: center;
                 img{
-                    height: 800px;
+                    max-height: 800px;
                     transform: translateX(-100px);
-                    z-index: -2;
+                    z-index: 0;
                 }
                 .s2d2{
                     background-color: var(--jaune);
@@ -176,7 +175,7 @@ body{
                     transform: translateX(100px);
                     max-width: 400px;
                     padding: 25px 25px 0 25px;
-                    z-index: -1;
+                    z-index: 1;
                     p{
                         padding-top: 20px;
                     }
@@ -197,7 +196,7 @@ body{
                     width: fit-content;
                     justify-self: center;
                     transform: translateY(20px);
-                    z-index: 0;
+                    z-index: 2;
                     &:hover{
                         background-color: var(--red);
                     } 
