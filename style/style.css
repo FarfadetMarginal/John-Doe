@@ -456,6 +456,9 @@ body{
 }
 @media screen and (max-width :767px) {
     body{
+        .modale{
+            left: 0;
+        }
         main {
             .s2{
                 .s2gd{
