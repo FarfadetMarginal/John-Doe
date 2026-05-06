@@ -260,27 +260,28 @@ body{
             max-width: 1410px;
             padding: 15px;
             margin: auto;
+            margin-bottom: 50px;
+            a{
+                border-style: groove;
+                border-color: var(--blanc);
+                border-width: 1px;
+                background-color: var(--nuit);
+                color: var(--blanc);
+                padding: 14px;
+                display: block;
+                margin-top: 10px;
+                width: fit-content;
+                justify-self: center;
+                &:hover{
+                    background-color: var(--red);
+                } 
+            }
             .s4d1{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding-bottom: 90px;
                 padding-top: 90px;
-                a{
-                    border-style: groove;
-                    border-color: var(--blanc);
-                    border-width: 1px;
-                    background-color: var(--nuit);
-                    color: var(--blanc);
-                    padding: 14px;
-                    display: block;
-                    margin-top: 10px;
-                    width: fit-content;
-                    justify-self: center;
-                    &:hover{
-                        background-color: var(--red);
-                    } 
-                }
             }
             .s4d2{
                 display: grid;
@@ -420,6 +421,9 @@ body{
 
             .s1{
                 grid-template-columns: 1fr;
+                .s1d1{
+                    max-width: fit-content;
+                }
                 img{
                     width: 70%;
                     justify-self: center;
@@ -494,12 +498,12 @@ body{
         opacity: 0;
         transform: translateY(40px);
         animation: fadein3 1s forwards;
-        &:nth-child(1) { animation-delay: 0.2s; }
-        &:nth-child(2) { animation-delay: 0.4s; }
-        &:nth-child(3) { animation-delay: 0.6s; }
-        &:nth-child(4) { animation-delay: 0.8s; }
-        &:nth-child(5) { animation-delay: 1s; }
-        &:nth-child(6) { animation-delay: 1.2s; }
+        &:nth-child(1) { animation-delay: 0s; }
+        &:nth-child(2) { animation-delay: 0.2s; }
+        &:nth-child(3) { animation-delay: 0.4s; }
+        &:nth-child(4) { animation-delay: 0.6s; }
+        &:nth-child(5) { animation-delay: 0.8s; }
+        &:nth-child(6) { animation-delay: 1s; }
     }
     main{
         .s1{
@@ -507,13 +511,13 @@ body{
                 opacity: 0;
                 transform: scale(0.1);
                 animation: fadein1 1s forwards;
-                animation-delay: 1.4s
+                animation-delay: 1.2s
             }
             .s1d1{
                 opacity: 0;
                 transform: translateY(50px);
                 animation: fadein2 1s forwards;
-                animation-delay: 1.2s
+                animation-delay: 1s
             }
         }
 
@@ -538,3 +542,75 @@ body{
     }
 }
 
+/* page2 */
+
+body{
+    main{
+        .p2s1{
+            background-color: var(--red);
+            color: var(--blanc);
+            height: 430px;
+            justify-items: center;
+            align-content: center;
+            h1{
+                font-family: "raleway";
+                font-weight: 700;
+                font-size: 36px;
+                margin-bottom: 30px;
+            }
+        }
+        .p2s2{
+            max-width: 1440px;
+            margin: auto;
+            padding: 15px;
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+            div{
+                flex:0 0 48%;
+                align-content: center;
+                h2{
+                    justify-self: flex-start;
+                    margin-bottom: 40px;
+                }
+                p{
+                    margin-bottom: 20px;
+                }
+            }
+            img{
+                flex: 0 0 48%;
+                width: 47%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width :1024px) {
+    body{
+        main{
+            .p2s2{
+                display: grid;
+                img{
+                    width: 90%;
+                    justify-self: center;
+                }
+            }
+        }
+    }
+}
+
+body{
+    main{
+        .p2s1{
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadein4 1s forwards;
+        }
+    }
+}
+@keyframes fadein4{
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
