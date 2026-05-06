@@ -340,6 +340,7 @@ body{
                         margin-top: 10px;
                         width: fit-content;
                         margin-left: 15px;
+                        justify-self: flex-start;
                         &:hover{
                             background-color: var(--red);
                         } 
@@ -612,5 +613,131 @@ body{
     to{
         transform:translateY(0);
         opacity: 1;
+    }
+}
+
+
+/* pageprojet */
+
+body{
+    main{
+        .p3s4{
+            max-width: 1410px;
+            padding: 15px;
+            margin: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            .switchpagediv{
+                justify-self: center;
+                gap: 20px;
+                display: flex;
+                .switchpage1{
+                    color: var(--red);
+                }
+                a{
+                    &:hover{
+                        color: var(--red);
+                    }
+                    color: var(--jaune);
+                }
+            }
+            .s4d1{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 90px;
+                padding-top: 90px;
+            }
+            .s4d2{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 40px;
+                padding-bottom: 40px;
+                :nth-child(1) .s4d4::after, :nth-child(2) .s4d4::after{
+                    content: "Front-end";
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    color: var(--blanc);
+                    background-color: var(--nuit);
+                    padding: 5px;
+                }
+                :nth-child(3) .s4d4::after{
+                    content: "Back-end";
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    color: var(--blanc);
+                    background-color: var(--nuit);
+                    padding: 5px;
+                }
+                article{
+                    .s4d3{
+                        background: #FF9A16;
+                        background: linear-gradient(0deg,rgba(255, 154, 22, 1) 0%, rgba(231, 23, 74, 1) 100%);
+                        padding-left: 2px;
+                        padding-right: 2px;
+                    }
+                    .s4d4{
+                        background-color: var(--nuit);
+                        padding: 15px;
+                        position: relative;
+                        img{
+                            height: 180px;
+                            position: relative;
+                        }
+                        h3{
+                            font-family: "raleway";
+                            font-weight: 700;
+                            font-size: 21px;
+                            padding-top: 15px;
+                            padding-bottom: 20px;
+                        } 
+                    }
+                    a{
+                        border-style: groove;
+                        border-color: var(--blanc);
+                        border-width: 1px;
+                        background-color: var(--nuit);
+                        color: var(--blanc);
+                        padding: 14px;
+                        display: block;
+                        margin-top: 10px;
+                        width: fit-content;
+                        margin-left: 15px;
+                        &:hover{
+                            background-color: var(--red);
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width :1024px) {
+    body{
+        main{
+            .p3s4{
+                .s4d2{
+                    grid-template-columns: 1fr 1fr;
+                    article:nth-last-of-type(1){
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width :767px) {
+    body{
+        main{
+            .p3s4{
+                .s4d2{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
     }
 }
