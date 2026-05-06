@@ -39,6 +39,9 @@ body{
         max-width: 1470px;
         margin: auto;
         padding: 10px;
+        #burger{
+            display: none;
+        }
         >a{
             color: var(--blanc);
             img{
@@ -353,6 +356,7 @@ body{
         justify-content: center;
         transition: all .4s;
         background-color: rgba(0, 0, 0, 0.421);
+        z-index: 5;
         &:target{
             visibility: visible;
             opacity: 1;  
@@ -404,6 +408,14 @@ body{
 
 @media screen and (max-width :1024px) {
     body{
+        header{
+            nav{
+                display: none;
+            }
+            #burger{
+                display: flex;
+            }
+        }
         main{
 
             .s1{
@@ -474,5 +486,54 @@ body{
                 }
             }
         }
+    }
+}
+
+body{
+    header nav ul li{
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadein3 1s forwards;
+        &:nth-child(1) { animation-delay: 0.2s; }
+        &:nth-child(2) { animation-delay: 0.4s; }
+        &:nth-child(3) { animation-delay: 0.6s; }
+        &:nth-child(4) { animation-delay: 0.8s; }
+        &:nth-child(5) { animation-delay: 1s; }
+        &:nth-child(6) { animation-delay: 1.2s; }
+    }
+    main{
+        .s1{
+            img{
+                opacity: 0;
+                transform: scale(0.1);
+                animation: fadein1 1s forwards;
+                animation-delay: 1.4s
+            }
+            .s1d1{
+                opacity: 0;
+                transform: translateY(50px);
+                animation: fadein2 1s forwards;
+                animation-delay: 1.2s
+            }
+        }
+
+    }
+}
+@keyframes fadein1{
+    to{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+@keyframes fadein2{
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadein3{
+    to{
+        transform:translateY(0);
+        opacity: 1;
     }
 }
