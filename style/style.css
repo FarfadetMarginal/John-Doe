@@ -288,7 +288,7 @@ body{
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 40px;
                 padding-bottom: 40px;
-                :nth-child(1) .s4d4::after, :nth-child(2) .s4d4::after{
+                .s4d4::after{
                     content: "Front-end";
                     position: absolute;
                     top: 30px;
@@ -653,7 +653,7 @@ body{
                 grid-template-columns: 1fr 1fr 1fr;
                 gap: 40px;
                 padding-bottom: 40px;
-                :nth-child(1) .s4d4::after, :nth-child(2) .s4d4::after{
+                .s4d4::after{
                     content: "Front-end";
                     position: absolute;
                     top: 30px;
@@ -662,7 +662,7 @@ body{
                     background-color: var(--nuit);
                     padding: 5px;
                 }
-                :nth-child(3) .s4d4::after{
+                :nth-child(3) .s4d4::after, :nth-child(6) .s4d4::after, :nth-child(9) .s4d4::after{
                     content: "Back-end";
                     position: absolute;
                     top: 20px;
